@@ -1,0 +1,14 @@
+1：在d盘里，放8个jar；sun.misc.BASE64Decoder.jar，weixinapi.jar,QRCode.jar,ueditor.jar 以及fc开头的几个fusioncharts的jar
+
+2；执行如下命令
+mvn install:install-file -Dfile=d:\weixinapi.jar -DgroupId=org.marker.weixin -DartifactId=weixinapi -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\QRCode.jar -DgroupId=com.swetake.qrcode -DartifactId=qrcode -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\sun.misc.BASE64Decoder.jar -DgroupId=sun.misc -DartifactId=base64decder -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\ueditor.jar -DgroupId=com.rain -DartifactId=ueditor -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+
+mvn install:install-file -Dfile=d:\fcexporter.jar -DgroupId=com.rain -DartifactId=fcexporter -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\fcexporthandler.jar -DgroupId=com.rain -DartifactId=fcexporthandler -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\fchelper.jar -DgroupId=com.rain -DartifactId=fchelper -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\fcsampleshelper.jar -DgroupId=com.rain -DartifactId=fcsampleshelper -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=d:\fctl.jar -DgroupId=com.rain -DartifactId=fctl -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+

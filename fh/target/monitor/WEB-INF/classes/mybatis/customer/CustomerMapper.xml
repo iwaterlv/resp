@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CustomerMapper">
+	<sql id="customerColumns">
+		customerId,tbId,backDate,phoneNo,customerType,backExpress,backExpressNo,customerReason,resolve,expressNo,express,status,mark
+	</sql>
+
+
+	<resultMap type="Customer" id="customerResultMap">
+		<id column="customerId" property="customerId"/>
+		<result column="tbId" property="tbId"/>
+		<result column="backeDate" property="backeDate"/>
+		<result column="phoneNo" property="phoneNo"/>
+		<result column="customerType" property="customerType"/>
+		<result column="backExpress" property="backExpress"/>
+		<result column="backExpressNo" property="backExpressNo"/>
+		<result column="customerReason" property="customerReason"/>
+		<result column="resolve" property="resolve"/>
+		<result column="expressNo" property="expressNo"/>
+		<result column="express" property="express"/>
+		<result column="status" property="status"/>
+		<result column="mark" property="mark"/>
+	</resultMap>
+
+	<select id="customerlistPage" parameterType="Page" resultType="pd">
+		select
+		<include refid="customerColumns" />
+		FROM
+		tb_customer
+		<where>
+			<if test="pd.tbId !=null and pd.tbId !=''">
+				tbId  like "%"#{tbId}"%"
+			</if>
+		</where>
+	</select>
+	
+</mapper>
